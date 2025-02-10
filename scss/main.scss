@@ -1,15 +1,12 @@
 // colours - #DCE2F0 (color), #50586C primary-color 
-
+@use 'menu';
+@use 'mixins' as *;
+@use 'sass:color' as color; // the lighten() funciton is deprecated in this version of sass
 $primary-color: #50586C;
 $secondary-color: #FF1493;
 $show-home-image: true;
 $home-image: url(https://elements-resized.envatousercontent.com/elements-cover-images/b91fd639-15d4-405a-957d-362c26e56944?w=433&cf_fit=scale-down&q=85&format=auto&s=e249edbd5348e4347017a372503ac917eaa0da6f3d4f360c2602fa56e879e159);
 $background-opacity: 0.9;
-
-@mixin easeOut {
-    transition: all 0.5s ease; //some cool stuff to add to the end are some transitions - https://www.w3schools.com/css/css3_transitions.asp 
-
-}
 
 @mixin background {
     @if $show-home-image {
@@ -19,7 +16,7 @@ $background-opacity: 0.9;
             background-size: cover;
 
             &:after {
-                // replaves overlay div class in the index.html file
+                // replaces overlay div class in the index.html file
                 content: '';
                 position: absolute;
                 top: 0;
@@ -27,7 +24,7 @@ $background-opacity: 0.9;
                 width: 100%;
                 height: 100%;
                 z-index: -1; //Ensures that background is pushed back of the text
-                background: rgba($primary-color, $background-opacity);
+                background: rgba(80, 88, 108, $background-opacity);
             }
         }
     }
@@ -66,7 +63,8 @@ h3 {
     &.sm-heading {
         margin-bottom: 3rem;
         padding: 0.2rem 1rem;
-        background: rgba(lighten($primary-color, 2), 0.5);
+        background: rgba(color.adjust($primary-color, $lightness: 2%), 0.5);
+        ;
 
     }
 
@@ -103,7 +101,7 @@ main {
 
             &:hover {
                 color: $secondary-color;
-                @include easeOut();
+                @include easeOut;
             }
         }
     }
