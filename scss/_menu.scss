@@ -101,9 +101,52 @@
         &.show {
             // Slide in from left
             transform: translate3d(0, 0, 0);
-            ;
+
+        }
+
+        // profile picture
+        .portrait {
+            width: 250px;
+            height: 250px;
+            // background:hsl(from bo h s l)
+            border-radius: 50%;
+            border: solid 3px $secondary-color;
+        }
+
+
+    }
+
+    .nav-item {
+        transform: translate3d(600px, 0, 0);
+        transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        @include easeOut;
+
+        &.show {
+            // Slide in from top
+            transform: translate3d(0, 0, 0);
+
         }
     }
 
+    // Styling the links of the navbar
+    .nav-link {
+        display: inline-block;
+        position: relative;
+        font-size: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-transform: uppercase;
+        padding: 1rem 0;
+        font-weight: 300;
+        color: #fff;
+        text-decoration: none;
+        @include easeOut;
+    }
+}
 
+// Delay each nav item transition by a few nanoseconds
+@for $x from 1 through 4 {
+    .nav-item:nth-child(#{$x}) {
+        transition-delay: $x * 0.09s; // !!!!!!!!!!!!!make transiiton smoother when hiding and making the mneu visible again!!!!!!!!!!!!!!
+
+    }
 }
