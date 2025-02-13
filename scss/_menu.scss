@@ -112,8 +112,6 @@
             border-radius: 50%;
             border: solid 3px $secondary-color;
         }
-
-
     }
 
     .nav-item {
@@ -125,6 +123,10 @@
             // Slide in from top
             transform: translate3d(0, 0, 0);
 
+        }
+
+        &.current>a {
+            color: $secondary-color;
         }
     }
 
@@ -140,6 +142,10 @@
         color: #fff;
         text-decoration: none;
         @include easeOut;
+
+        &:hover {
+            color: $secondary-color;
+        }
     }
 }
 

@@ -1,0 +1,8 @@
+$primary-color: #50586C;
+$secondary-color: #FF1493;
+
+//Ease out function
+@mixin easeOut {
+    transition: all 0.5s ease; //some cool stuff to add to the end are some transitions - https://www.w3schools.com/css/css3_transitions.asp 
+
+}
