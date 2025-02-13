@@ -82,7 +82,7 @@
         padding: 0;
         background: color.adjust($primary-color, $lightness: -5%);
         list-style-type: none; // getting rid of the bullet points next to the nav bar items
-        transform: translate3d(0, -100%, 0);
+        transform: translate3d(+100%, 0, 0);
         @include easeOut;
 
         &.show {
