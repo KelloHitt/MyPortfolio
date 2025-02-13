@@ -1,4 +1,5 @@
 @use 'mixins' as *;
+@use 'sass:color' as color; // the darken() function is deprecated is this version of sass
 // Menu Button
 
 .menu-btn {
@@ -48,4 +49,47 @@
         }
     }
 
+}
+
+// Menu Overlay
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.8; // change the opacity of the navbar
+    visibility: hidden;
+
+    &.show {
+        visibility: visible;
+    }
+
+    &-branding,
+    &-nav {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden; // no scroll bars
+
+
+    }
+
+    &-nav {
+        margin: 0;
+        padding: 0;
+        background: color.adjust($primary-color, $lightness: -5%);
+        list-style-type: none; // getting rid of the bullet points next to the nav bar items
+        transform: translate3d(0, -100%, 0);
+        @include easeOut;
+
+        &.show {
+            // Ensure that nav items don't show until the menu icon has done it tranisiton
+            transform: translate3d(0, 0, 0);
+        }
+
+
+    }
 }
