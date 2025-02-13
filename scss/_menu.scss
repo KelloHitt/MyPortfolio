@@ -86,10 +86,24 @@
         @include easeOut;
 
         &.show {
-            // Ensure that nav items don't show until the menu icon has done it tranisiton
+            // Slide in from right
             transform: translate3d(0, 0, 0);
         }
-
-
     }
+
+
+    // Applying transition 
+    &-branding {
+        background: $primary-color;
+        transform: translate3d(-100%, 0, 0);
+        @include easeOut;
+
+        &.show {
+            // Slide in from left
+            transform: translate3d(0, 0, 0);
+            ;
+        }
+    }
+
+
 }
