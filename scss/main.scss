@@ -90,3 +90,56 @@ main {
         }
     }
 }
+
+// CSS styling for 'about.html'
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 'bioimage bio bio'
+        'uni1 uni2 uni3';
+    grid-template-columns: repeat(3, 1fr);
+
+    .bio-image {
+        grid-area: bioimage;
+        margin: auto;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        border: $secondary-color 3px solid;
+    }
+
+    .bio {
+        grid-area: bio;
+        font-size: 1.5rem;
+    }
+
+    .uni-1 {
+        grid-area: uni1;
+    }
+
+    .uni-2 {
+        grid-area: uni2;
+
+    }
+
+    .uni-3 {
+        grid-area: uni3;
+
+    }
+
+
+    .uni {
+        background: rgba(color.adjust($primary-color, $lightness: 2%), 0.5);
+        padding: 0.5rem;
+        border-bottom: $secondary-color 5px solid;
+    }
+}
+
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: color.adjust($primary-color, $lightness: -10%);
+    color: set-text-color($primary-color);
+    height: 60px;
+
+}
