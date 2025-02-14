@@ -31,3 +31,31 @@ $background-opacity: 0.9;
     transition: all 0.5s ease; //some cool stuff to add to the end are some transitions - https://www.w3schools.com/css/css3_transitions.asp 
 
 }
+
+// Media Query Mixins 
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        // Any CSS within this block will only be applied if the screen is 500 pixels
+        @content; // Automatically puts code in here from another file 
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        // Any CSS within this block will only be applied if the screen is 500 pixels
+        @content;
+    }
+}
+
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}
