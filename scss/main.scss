@@ -138,6 +138,51 @@ main {
     }
 }
 
+// Projects
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+
+    img {
+        width: 100%;
+        border: 3px #fff solid;
+        border-radius: 10px;
+
+        &:hover {
+            opacity: 0.5;
+            border-color: $secondary-color;
+            @include easeOut;
+        }
+    }
+}
+
+// Button Styles - Using inheritance
+.btn {
+    display: block;
+    padding: 0.5rem 1 rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+
+    &:hover {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
+}
+
+.btn-dark {
+    @extend .btn;
+    background: color.adjust($primary-color, $lightness: -50%);
+    color: #fff;
+}
+
+.btn-light {
+    @extend .btn;
+    background: color.adjust($primary-color, $lightness: 50%);
+    color: #333;
+}
+
+
 #main-footer {
     text-align: center;
     padding: 1rem;
@@ -145,5 +190,8 @@ main {
     color: set-text-color($primary-color);
     height: 60px;
 }
+
+
+
 
 @import 'mobile'; // have to use @import function as although it has not been deprecated from the sass function, it will be removed in 3.0.0 but with the current sass version (1.84.0) is valid
