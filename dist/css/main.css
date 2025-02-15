@@ -146,6 +146,12 @@
     width: 150px;
     height: 150px;
   }
+  .about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: "bioimage" "bio" "uni1" "uni2" "uni3";
+    grid-template-columns: 1fr;
+  }
 }
 @media screen and (max-width: 500px) {
   main#home h1 {
@@ -218,7 +224,7 @@ header {
 
 main {
   padding: 5rem;
-  height: 100%;
+  min-height: calc(100vh - 60px);
 }
 main .icons {
   margin-top: 1rem;
@@ -277,6 +283,51 @@ main#home h1 {
   background: rgb(58.2978723404, 64.1276595745, 78.7021276596);
   color: #fff;
   height: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center;
+  }
+  main .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+  }
+  ul.menu-nav.show,
+  div.menu-branding.show {
+    transform: translate3d(0, 0, 0);
+  }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(100%, 0, 0);
+    font-size: 24px;
+  }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(-100%, 0, 0);
+  }
+  .portrait {
+    width: 150px;
+    height: 150px;
+  }
+  .about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: "bioimage" "bio" "uni1" "uni2" "uni3";
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 2vh;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
