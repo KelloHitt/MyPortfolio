@@ -2,9 +2,10 @@
 $primary-color: #50586C;
 $secondary-color: #FF1493;
 $show-home-image: true;
-$home-image: url(https://elements-resized.envatousercontent.com/elements-cover-images/b91fd639-15d4-405a-957d-362c26e56944?w=433&cf_fit=scale-down&q=85&format=auto&s=e249edbd5348e4347017a372503ac917eaa0da6f3d4f360c2602fa56e879e159);
-$background-opacity: 0.9;
+$home-image: url(https://img.freepik.com/free-vector/circuit-board_24908-54163.jpg?t=st=1739676409~exp=1739680009~hmac=ae568720fb32b29eac2cccfc10f731ddf2525ecfb347b0d889ff3fa046e66884&w=1480);
+$background-opacity: 0.95;
 
+// https://www.youtube.com/watch?v=qGYNbrT9P6Y&list=PLillGF-RfqbYoGoCjKoMOkVznV6aSXKzU&index=7
 @mixin background {
     @if $show-home-image {
         &#bg-img {
