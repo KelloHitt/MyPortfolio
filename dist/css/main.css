@@ -66,9 +66,10 @@
   transform: translate3d(0, 0, 0);
 }
 .menu-branding .portrait {
+  opacity: 1;
   width: 250px;
   height: 250px;
-  background: url(https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+  background: url("https://www.shutterstock.com/image-vector/internet-technology-programming-seamless-background-600nw-340964765.jpg");
   border-radius: 50%;
   border: solid 3px #FF1493;
 }
@@ -271,8 +272,8 @@ main#home h1 {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 190px;
   border: #FF1493 3px solid;
 }
 .about-info .bio {
