@@ -1,2 +1,3 @@
-
-This is a responsive portfolio which showcases some of my projects and information about me. The technologies used are Sass, HTML and some Javascript. In order to see my website, please first clone this repository on to your local computer. Then go into the index.html file and click 'Open with Live Server' in Visual Studio Code. 
+## Read Me
+This is a responsive portfolio that highlights some of my projects and provides information about me. It was built using HTML, Sass, and a bit of JavaScript.
+To view the website, please clone this repository to your computer. Then, navigate to the index.html file inside the dist directory and open it using Live Server in Visual Studio Code (please ensure you have the Live Server extension installed).
