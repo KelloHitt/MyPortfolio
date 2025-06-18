@@ -1,1 +1,0 @@
-This is a responsive portfolio which showcases some of my projects and information about me. The technologies used are Sass, HTML and some Javascript. In order to see my website, please go into the index.html file and click 'Open with Live Server'
